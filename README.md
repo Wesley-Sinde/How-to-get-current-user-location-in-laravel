@@ -13,7 +13,7 @@ So, here I am using stevebauman/location laravel package, Using this package you
 
 So, let's start and follow below step one by one :.
 
-   <h3>Step 1 : Install Laravel</h3>
+   Step 1 : Install Laravel
 In this step create fresh laravel project so, copy below command and create new laravel project if does't exist.
 ```php
 composer create-project --prefer-dist laravel/laravel get_location
@@ -21,13 +21,13 @@ composer create-project --prefer-dist laravel/laravel get_location
 ```
  
 
-<h3> Step 2 : Install stevebauman/location Package</h3>
+Step 2 : Install stevebauman/location Package
 After that project setup we will install stevebauman/location Package using below command.
 ```php
 composer require stevebauman/location
  
 ```
-  <h3>Step 3 : Add Service Provider And Aliase</h3>
+  Step 3 : Add Service Provider And Aliase
 After package installation we need to add service provider and aliase in config/app.php.
 ```php
 'providers' => [
@@ -41,7 +41,7 @@ After package installation we need to add service provider and aliase in config/
 ],
 ```
 
- <h3>Step 4 : Create Controller</h3>
+ Step 4 : Create Controller
 Now create controller on this path app\Http\Controllers\UserController.php and add below command.
 ```php
 <?php
@@ -63,7 +63,7 @@ class UserController extends Controller
 
  
 
-<h3>Step 5 : Add Routes
+Step 5 : Add Routes
 In this add routes in web.php file.
 ```php
 <?php
@@ -73,7 +73,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('user_details', 'UserController@userDetails');
  
 ```
-<h3><h3>Step 6 : Create Blade File </h3>
+Step 6 : Create Blade File 
 Now, create details.blade.php file for get current user location details in this path resources\views\details.blade.php and add below html code.
 ```php
 <html>
@@ -103,12 +103,12 @@ Just run
   Php artisan serve
 ```
 
-<h3>Then go to;</h3>
+Then go to;
 ```php
   http://127.0.0.1:8000/ip_details
 ```
 
-<h3> How To Get Current User Location In Laravel </h3>
+How To Get Current User Location In Laravel
 
 
 
