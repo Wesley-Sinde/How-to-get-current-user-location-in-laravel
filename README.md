@@ -15,22 +15,22 @@ So, let's start and follow below step one by one :.
 
    Step 1 : Install Laravel
 In this step create fresh laravel project so, copy below command and create new laravel project if does't exist.
-
+[
 composer create-project --prefer-dist laravel/laravel get_location
  
-
+]
 Read Also : Laravel 6 CRUD Tutorial with Example
  
 
 Step 2 : Install stevebauman/location Package
 After that project setup we will install stevebauman/location Package using below command.
-
+[
 composer require stevebauman/location
  
-
+]
   Step 3 : Add Service Provider And Aliase
 After package installation we need to add service provider and aliase in config/app.php.
-
+[
 'providers' => [
 	
 	Stevebauman\Location\LocationServiceProvider::class,
@@ -40,11 +40,11 @@ After package installation we need to add service provider and aliase in config/
 	
 	'Location' => 'Stevebauman\Location\Facades\Location',
 ],
- 
+]
 
  Step 4 : Create Controller
 Now create controller on this path app\Http\Controllers\UserController.php and add below command.
-
+[
 <?php
 
 namespace App\Http\Controllers;
@@ -60,30 +60,29 @@ class UserController extends Controller
         return view('details',compact('data'));
     }
 }
- 
+]
 
-Read Also : How To Generate QR Code In Laravel
  
 
 Step 5 : Add Routes
 In this add routes in web.php file.
-
+[
 <?php
 
 use Illuminate\Support\Facades\Route;
 
 Route::get('user_details', 'UserController@userDetails');
  
-
+]
 Step 6 : Create Blade File 
 Now, create details.blade.php file for get current user location details in this path resources\views\details.blade.php and add below html code.
-
+[
 <html>
 <head>
-	<title>How To Get Current User Location In Laravel - Techsolutionstuff</title>
+	<title>How To Get Current User Location In Laravel - Wesley Sinde</title>
 </head>
 <body style="text-align: center;">
-	<h1> How To Get Current User Location In Laravel - Techsolutionstuff</h1>
+	<h1> How To Get Current User Location In Laravel - Wesley Sinde</h1>
 	<div style="border:1px solid black; margin-left: 300px; margin-right: 300px;">
 	<h3>IP: {{ $data->ip }}</h3>
 	<h3>Country Name: {{ $data->countryName }}</h3>
@@ -97,9 +96,18 @@ Now, create details.blade.php file for get current user location details in this
 	</div>
 </body>
 </html>
- 
+]
 
-So, finally we are done with our code we can get below output.
+So, finally we are done with our code we can get  output.
+Just run 
+[
+  Php artisan serve
+]
+
+Then go to;
+[
+  http://127.0.0.1:8000/ip_details
+]
 
 How To Get Current User Location In Laravel
 
